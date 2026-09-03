@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="topbar">
+        <img src="IndexImages/logo-header.jpg" alt="Logo" class="logo" />
+        <nav class="nav1">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Cards</a></li>
+            <li><a href="#">Combos</a></li>
+            <li>
+              <button
+                class="LoginBtn"
+                onclick="window.location.href = 'Login.html'"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <h1>
+          Find, Create, and Share Your
+          <span class="highlight">Yu-Gi-Oh</span> Combos
+        </h1>
+        <h2>Search Combos by Cards</h2>
+        <div class="search-container">
+          <form>
+            <input type="text" placeholder="Search for cards..." />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="card-slider">
+        <div class="card-track">
+          <img
+            src="cardsImages/ExosisterKarmael.jpg"
+            alt="Card 1"
+            class="card"
+          />
+          <img
+            src="cardsImages/TheLightlessshadowcard.jpg"
+            alt="Card 2"
+            class="card"
+          />
+          <img
+            src="cardsImages/deepeyeswhitedragon.jpg"
+            alt="Card 3"
+            class="card"
+          />
+          <img src="cardsImages/DarkHole.jpg" alt="Card 4" class="card" />
+          <img src="cardsImages/AshBlossom.jpg" alt="Card 5" class="card" />
+          <img
+            src="cardsImages/ApprenticeMagician.jpg"
+            alt="Card 6"
+            class="card"
+          />
+          <img
+            src="cardsImages/AlbionTheSanctifireDragon.jpg"
+            alt="Card 7"
+            class="card"
+          />
+        </div>
+      </div>
+    </section>
+    <script src="indexjs.js"></script>
+  </body>
+</html>

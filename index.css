@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: -20px;
+
+    background-image: url("IndexImages/HD-wallpaper-video-game-yu-gi-oh-yu-gi-oh-master-duel.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);
+    z-index: -2;
+}
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+    z-index: -1;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo{
+    width: 150px;
+    height: auto;
+}
+.nav1 ul{
+    display:flex;
+    list-style: none;
+    gap:40px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav1 a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+.nav1 a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:100%;
+    height:2px;
+    background:#fafafa;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.3s;
+}
+.nav1 a:hover::after{
+    transform:scaleX(1);
+}
+.LoginBtn{
+    background:#C8102E;
+    border:none;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.3s;
+}
+.LoginBtn:hover{
+    background:#a60f2e;
+}
+.highlight{
+    color: #C8102E;
+}
+.content{
+    color:  white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.search-container {
+    margin: 20px 0;
+}
+.search-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+.search-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #C8102E;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.search-container button:hover {
+    background: #a60f2e;
+}
+.card-slider {
+    position: relative;
+
+    width: 100%;
+    height: 250px;
+
+    margin-top: 100px;
+
+    overflow: hidden;
+}
+
+.card-track {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.card-track img {
+    position: absolute;
+
+    top: 10px;
+
+    width: 150px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    user-select: none;
+    pointer-events: none;
+}
