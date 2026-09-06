@@ -7,7 +7,6 @@ const spacing = cardWidth + gap;
 
 const speed = 1;
 
-// Start cards spread out across the screen
 let positions = [];
 
 cards.forEach((card, index) => {
@@ -15,25 +14,19 @@ cards.forEach((card, index) => {
 });
 
 function animate() {
-
     cards.forEach((card, index) => {
-
-        // Move the card to the RIGHT
         positions[index] += speed;
 
-        // If card completely leaves the RIGHT
+        // If card completely leaves the RIGHT edge
         if (positions[index] > slider.offsetWidth) {
+            // Find leftmost position among ALL OTHER cards (excluding this one)
+            const otherPositions = positions.filter((_, i) => i !== index);
+            const leftMost = Math.min(...otherPositions);
 
-            // Find the card currently furthest LEFT
-            const leftMost = Math.min(...positions);
-
-            // Put this card OUTSIDE the LEFT edge
             positions[index] = leftMost - spacing;
         }
 
-        // Move the actual image
-        card.style.transform =
-            `translateX(${positions[index]}px)`;
+        card.style.transform = `translateX(${positions[index]}px)`;
     });
 
     requestAnimationFrame(animate);
